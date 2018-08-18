@@ -1,0 +1,12 @@
+<scroll-view class="tab-scoller " scroll-x="true"  scroll-left="{{scrollLength}}">
+      <block wx:for="{{listTab}}" wx:key="code">
+            <view class="tab-view" data-index="{{index}}" id="{{item.code}}" bindtap="reflashData">
+                  <text class="tab-text active" wx:if="{{index == curIndex}}">{{item.text}}</text>
+                  <text class="tab-text" wx:else>{{item.text}}</text>
+
+            </view>
+      </block>
+</scroll-view> 
+<view style="width:100%;heigth:100%;">
+      <text style="position:absolute;top:50%;left:40%; font-size:1.5rem">{{curText}}</text>
+</view>

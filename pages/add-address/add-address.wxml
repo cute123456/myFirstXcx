@@ -1,0 +1,40 @@
+<!--pages/add-address/add-address.wxml-->
+<import src="../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view class="addAddress">
+  <view class="addItem">
+    <text class="name" >收件人</text>
+    <input class="con" type="text" placeholder='收件人' bindinput="input_name"/>
+  </view>
+  <view class="addItem">
+    <text class="name">联系电话</text>
+    <input class="con" type="number" placeholder='联系电话' bindinput="input_mobile"  />
+  </view>
+  <view class="addItem">
+    <text class="name">所在地区</text>
+    <view class="con" bindtap="open">{{province}} {{city}} {{county}}</view>
+  </view>
+  <view class="addItem">
+    <text class="name">详细地址</text>
+    <input class="con" type="text" placeholder='街道，楼牌号等' bindinput="input_detail" />
+  </view>
+  <button type="warn" bindtap="save" class="btn">保存地址</button>
+</view>
+
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

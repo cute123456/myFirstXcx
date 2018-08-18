@@ -1,0 +1,13 @@
+<!--pages/wx-chart/wx-chart.wxml-->
+<!-- <canvas class="canvas" canvas-id="ringGraph"></canvas> -->
+<!-- <canvas class="canvas" canvas-id='lineGraph'></canvas> -->
+<canvas class="canvas" canvas-id='pieGraph'></canvas>
+<canvas class="canvas" canvas-id='pieCanvas'></canvas>
+<canvas class="canvas" canvas-id='ringCanvas'></canvas>
+<canvas class="canvas" canvas-id='lineCanvas'></canvas>
+<canvas class="canvas" canvas-id='columnCanvas'></canvas>
+<canvas class="canvas" canvas-id='areaCanvas'></canvas>
+<canvas class="canvas" canvas-id='radarCanvas'></canvas>
+
+
+

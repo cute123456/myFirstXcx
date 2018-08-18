@@ -1,0 +1,6 @@
+/* pages/wx-chart/wx-chart.wxss */
+
+.canvas {
+    width: 100%;
+     min-height: 310px; 
+}

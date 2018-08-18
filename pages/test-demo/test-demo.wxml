@@ -1,0 +1,6 @@
+<block wx:for="{{list}}" wx:key="">
+    <image class='relative width-100 mgb-20 fade_in' src='{{item.cover_url}}' mode='widthFix' style='display:none' bindload="_imgOnLoad" id='{{item.cover_url}}'></image>
+     <view class='tag-bg {{item.checked?"tag-bg1":""}}'></view>
+     <view class='tag-text fz-30 fwb'>{{item.type_name}}</view>
+     <image class='relative width-100 mgb-20 fade_in {{item.loaded?"":"loading-img"}}' src='{{item.loaded?item.cover_url:item.url}}' mode='widthFix'></image>
+ </block>

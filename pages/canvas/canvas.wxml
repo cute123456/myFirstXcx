@@ -1,0 +1,7 @@
+<view style='position:absolute;left:400rpx;'><canvas  canvas-id='ttcanvas' style='height:240px;width:320px;position:absolute;left:400rpx;'>
+   <!-- <view class='colorpic'>
+      <view class='pictit'><image src='{{scanConfig.userInfo.avatar}}'></image></view>
+      <view class='picblock'><image src='../images/ttshare.png'></image><text>{{gameConfig.myScore}}</text></view>
+      <view  class='pictext'><image src='../images/qiubai.png'></image></view>
+    </view>   -->
+  </canvas></view> 

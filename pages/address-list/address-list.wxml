@@ -1,0 +1,32 @@
+<!--pages/address-list/address-list.wxml-->
+<view class="addressList" >
+  <scroll-view scroll-y style="height: {{height}}px;"  bindscrolltolower="loadMore" >
+    <view wx:for="{{addressList}}" wx:key="item.id" class="addressItem" >
+      <view class="addressWrap" id="{{item.id}}" bindtap="seleAddress">
+        <view class="iconWrap">
+           <i wx:if="{{item.isdefault == 1 ? true : false}}" class="icon-left fa fa-check" aria-hidden="true"></i> 
+        </view>
+        <view classs="addressText" >
+          <view class="black">
+            <text>{{item.realname}} </text>
+            <text style="margin-left:20rpx;">{{item.mobile}} </text>
+          </view>
+          <block class="address">{{item.province}} {{item.city}} {{item.area}} {{item.address}} </block>
+        </view>
+      </view>
+      <i id="{{item.id}}" bindtap="goList" class="iconWrap icon-right fa fa-pencil-square-o" aria-hidden="true"></i>
+
+
+    </view>
+    <view class="done" wx:if="{{total>0 && isDone == true}}">没有数据啦</view>
+    <view class="done" wx:if="{{total <= 0}}">暂无地址</view>
+    <view class="done" wx:if="{{total>0 && isDone == false}}">加载更多</view>
+    </scroll-view>
+    
+    
+    
+    <view bindtap="toAdd" class="addbtn">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      新增地址
+    </view>
+</view>

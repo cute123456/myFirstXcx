@@ -1,0 +1,67 @@
+<!-- 主容器 --> 
+  <!-- 单价 -->
+    <text style="display:block;margin-bottom:20px;color:red;font-size:26px;text-align:center;">{{money}}</text> 
+<view class="stepper">
+    <!-- 减号 -->  
+    <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+    <!-- 数值 -->  
+    <input type="number" bindchange="bindManual" value="{{num}}" />  
+    <!-- 加号 -->  
+    <text class="normal" bindtap="bindPlus">+</text>  
+</view>  
+<view style='margin-top:100rpx;'></view>
+<button class='primary' bindtap='toAddress'>添加收货地址</button>
+<view style='margin-top:30px;font-size:14px; color:#333;padding:20px;line-height:26px;'>
+我们的爱没有错 - 胡夏
+(电视剧《泡沫之夏》主题曲)
+作曲：V.K克
+作词：代岳东
+编曲：Takey
+回忆多苦涩 谁真正拥有
+曾经的快乐 谁先放弃了
+不甘心 也只能无可奈何
+到了站 该下车
+我终于懂了 谁都有遗憾
+沿途的风景 错过的不为谁而停留
+I never wanna let you go
+Don’t you know I love you?
+还记得 你的笑容
+一夜一夜 伴我入梦
+一瞬间 却被清空
+一颗心 有多痛
+我们能不能 别放开手
+别让泪流 别去计较结果
+我们能不能 别管昨天
+别管以后 一切重新来过
+我们能不能 别再闪躲
+别再错过 别再独自承受
+站在时光彼岸 再回望那些时候
+要用什么 证明曾经爱过
+我终于懂了 谁都有遗憾
+沿途的风景 错过的不为谁而停留
+I never wanna let you go
+Don’t you know I love you?
+还记得 你的笑容
+一夜一夜 伴我入梦
+一瞬间 却被清空
+一颗心 有多痛
+我们能不能 别放开手
+别让泪流 别去计较结果
+我们能不能 别管昨天
+别管以后 一切重新来过
+我们能不能 别再闪躲
+别再错过 别再独自承受
+站在时光彼岸 再回望那些时候
+要用什么 证明曾经爱过
+我们能不能 别放开手
+别让泪流 别去计较结果
+我们能不能 别管昨天
+别管以后 让一切重新开始好不好
+我们能不能 别再闪躲
+别再错过 别再独自承受
+站在时光彼岸 再回望那些时候
+闭上眼睛 别让泪水滑落
+我多想把你手紧握
+I only want you
+</view>
+<view style="border-radius:10px;padding:10px;background:#666;color:#fff;text-align:center; position:fixed; bottom:20px;right:20px;" bindtap='getTop'>返回顶部</view>

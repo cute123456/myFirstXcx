@@ -1,0 +1,2 @@
+<!--component/test/test.wxml-->
+<view wx:for="{{listq}}" bindmyevent="onMyEvent" id="{{item}}">{{item}}</view>

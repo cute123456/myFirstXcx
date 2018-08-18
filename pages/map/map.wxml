@@ -1,0 +1,6 @@
+<!--index.wxml-->    
+<view class="container">    
+当前城市为：{{currentCity}} 
+
+<view bindtap='togo' style="margin-top:30px;">去这里</view>  
+</view>  

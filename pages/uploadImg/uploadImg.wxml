@@ -1,0 +1,48 @@
+<!--uploadImg.wxml-->
+<view style='margin-left:30px; margin-top:30px;margin-bottom:20px;'>获取微信用户的头像和名称</view>
+<view class='top'>
+    <open-data type="userAvatarUrl" class='tx'></open-data>
+    <open-data type="userNickName" class='name'></open-data>    
+</view>
+
+<view style='margin-left:30px; margin-bottom:20px;'>多张图片上传并预览</view>
+
+<view class="gallery">
+    <view class="item" wx:for="{{images}}" wx:key="">
+        <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="delete" data-index="{{index}}">X</view>
+    </view>
+    <view class="item" bindtap="chooseImage">
+        <view class='addIcon'>+</view>
+    </view>
+</view>
+<navigator url="/pages/singleUpload/singleUpload" hover-class="navigator-hover">
+<view style='margin-left:30px; margin-top:30px;margin-bottom:20px; color:blue'>单张图片上传链接</view>
+</navigator>
+<navigator url="/pages/canvas/canvas" hover-class="navigator-hover">
+<view style='margin-left:30px; margin-top:30px;margin-bottom:20px; color:blue'>画布canvas</view>
+</navigator>
+<button class="kf_button" open-type="contact" session-from="weapp">
+    客服按钮
+</button>
+
+<button data-name="shareBtn" open-type="share" plain="true" style='margin-top:20px;'>转发</button>
+
+
+<view style='display:flex; flex-wap:wap; margin-bottom:60px; align-items:center; text-align:center;'>
+
+<view style='margin-top:30px;margin-bottom:20px; width:25%; color:blue' bindtap='saoma'>扫码</view>
+
+<navigator url="/pages/wx-chart/wx-chart" hover-class="navigator-hover" style='width:25%; '>
+<view style= 'margin-top:30px;margin-bottom:20px; color:blue'>图饼</view>
+</navigator>
+
+<navigator url="/pages/map/map" hover-class="navigator-hover" style='width:25%; '>
+<view style= 'margin-top:30px;margin-bottom:20px; color:blue'>地图定位</view>
+</navigator>
+
+<view style='margin-top:30px;margin-bottom:20px; width:25%; color:blue' bindlongtap='luyin'>录音</view>
+</view>
+<!-- <button type="primary" bindtap="submit">提交</button> -->
