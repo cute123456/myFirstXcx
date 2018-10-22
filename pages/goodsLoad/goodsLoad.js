@@ -9,8 +9,9 @@ Page({
     navbar: ['护肤', '彩妆', '香水', '个人护理'],
     currentTab: 0,
     fixed:'relative',
+      swiperIndex: 0,//这里不写第一次启动展示的时候会有问题
     // banner
-    imgUrls: [
+      imgUrls: [
       'http:\/\/mz.djmall.xmisp.cn\/files\/banner\/20161219\/148211980641.png',
       'http:\/\/mz.djmall.xmisp.cn\/files\/banner\/20161222\/148238831285.png',
       'http:\/\/mz.djmall.xmisp.cn\/files\/banner\/20161222\/14823895573.png'
@@ -176,6 +177,11 @@ Page({
     }
 
   },
+    bindchange(e) {
+        this.setData({
+            swiperIndex: e.detail.current
+        })
+    },
   getSroll: function() {
     // wx.pageScrollTo({
     //   scrollTop: 100,
